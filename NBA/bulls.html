@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/bulls.js"></script>
+
+    <title>NBA</title>
+  </head>
+  <body class="body-bulls">
+    <header>
+      <div class="buttons-clubs">
+        <a class="btn-team btn-bulls" href="#">Bulls</a>
+        <a class="btn-team btn-warriors" href="warriors.html">Warriors</a>
+        <a class="btn-team btn-lakers" href="lakers.html">Lakers</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-hero section-hero-bulls">
+        <div class="header">
+          <div class="header-logo header-logo-bulls">
+            <span class="span-team-name">Chicago Bulls</span>
+          </div>
+          <div class="header-nav">
+            <a class="link-header" href="#dynasty">Dynasty</a>
+            <a class="link-header" href="#mvp">MVPs</a>
+            <a class="link-header" href="#legacy">Legacy</a>
+            <a class="link-header link-header-bulls" href="#tryyourself"
+              >Try yourself</a
+            >
+            <a class="link-header" href="#gallery">Gallery</a>
+          </div>
+        </div>
+        <h2 class="heading-secondary player-name">Player Name</h2>
+        <h2 class="heading-secondary add-player-name">Player Name</h2>
+        <div class="hero-renders hero-renders-bulls">
+          <img
+            class="img-render img-render-jordan img-center"
+            src="img/bulls/jordanrender.png"
+          />
+          <img
+            class="img-render img-render-pippen img-right-1"
+            src="img/bulls/pippenrender.png"
+          />
+          <img
+            class="img-render img-render-rose img-right-2"
+            src="img/bulls/roserender2.png"
+          />
+          <img
+            class="img-render img-render-lavine img-left-2"
+            src="img/bulls/lavinerender.png"
+          />
+          <img
+            class="img-render img-render-derozan img-left-1"
+            src="img/bulls/derozanrender.png"
+          />
+          <img
+            class="img-render img-render-rodman img-add hidden"
+            src="img/bulls/rodmanrender.png"
+          />
+        </div>
+      </section>
+      <section class="section-dynasty section-dynasty-bulls" id="dynasty">
+        <div class="container dynasty dynasty-bulls">
+          <h2 class="heading-secondary">Dynasty</h2>
+        </div>
+      </section>
+      <section class="section-mvp section-mvp-bulls" id="mvp">
+        <div class="container mvp mvp-bulls">
+          <h2 class="heading-secondary">MVPs</h2>
+        </div>
+      </section>
+      <section class="section-legacy section-legacy-bulls" id="legacy">
+        <div class="container legacy legacy-bulls">
+          <h2 class="heading-secondary">Legacy</h2>
+        </div>
+      </section>
+      <section
+        class="section-tryyourself section-tryyourself-bulls"
+        id="tryyourself"
+      >
+        <div class="container tryyourself tryyourself-bulls">
+          <h2 class="heading-secondary">Try yourself</h2>
+          <div class="class-box tryyourself-box grid grid--2-cols">
+            <div class="height-mesure">
+              <p class="section-p">Compare your height to the NBA stars.</p>
+              <p class="section-p">Type your height in CM:</p>
+              <div class="input-height-box">
+                <input class="input-height" type="number" min="50" max="250" placeholder="178cm" />
+                <input class="input-submit input-submit-bulls" type="submit" value="Check"></input>
+                <p class="section-p alert-p"></p>
+              </div>
+              <div class="btn-choose-box">
+
+                <button class="btn-choose-compare btn-choose-jordan">Michael Jordan</button>
+                <button class="btn-choose-compare btn-choose-derozan">DeMar DeRozan</button>
+                <button class="btn-choose-compare btn-choose-rose">Derick Rose</button>
+                <button class="btn-choose-compare btn-choose-pippen">Scottie Pippen</button>
+                <button class="btn-choose-compare btn-choose-lavine">Zach Lavine</button>
+                <button class="btn-choose-compare btn-choose-rodman">Dennis Rodman</button>
+              </div>
+            </div>
+            <div class="compare-box grid grid--2-cols">
+              <img
+                class="img-compare-you"
+                src="img/bulls/tryyourself/tryyourself-you.png"
+              />
+              <img
+                class="img-compare-player img-compare-jordan img-hidden"
+                src="img/bulls/tryyourself/try-jordan.png"
+              />
+              <img
+                class="img-compare-player img-compare-derozan img-hidden"
+                src="img/bulls/tryyourself/try-derozan.png"
+              />
+              <img
+                class="img-compare-player img-compare-rose img-hidden"
+                src="img/bulls/tryyourself/try-rose.png"
+              />
+              <img
+                class="img-compare-player img-compare-pippen img-hidden"
+                src="img/bulls/tryyourself/try-pippen.png"
+              />
+              <img
+                class="img-compare-player img-compare-lavine img-hidden"
+                src="img/bulls/tryyourself/try-lavine.png"
+              />
+              <img
+                class="img-compare-player img-compare-rodman img-hidden"
+                src="img/bulls/tryyourself/try-rodman.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-gallery section-gallery-bulls" id="gallery">
+        <div class="container gallery gallery-bulls">
+          <h2 class="heading-secondary">Gallery</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

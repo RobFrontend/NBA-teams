@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="js/script.js"></script>
+    <script defer src="js/lakers.js"></script>
+
+    <title>NBA</title>
+  </head>
+  <body class="body-lakers">
+    <header>
+      <div class="buttons-clubs">
+        <a class="btn-team btn-bulls" href="bulls.html">Bulls</a>
+        <a class="btn-team btn-warriors" href="warriors.html">Warriors</a>
+        <a class="btn-team btn-lakers" href="#">Lakers</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-hero section-hero-lakers">
+        <div class="header">
+          <div class="header-logo header-logo-lakers">
+            <span class="span-team-name">Los Angeles Lakers</span>
+          </div>
+          <div class="header-nav">
+            <a class="link-header link-header-lakers" href="#dynasty"
+              >Dynasty</a
+            >
+            <a class="link-header link-header-lakers" href="#mvp">MVPs</a>
+            <a class="link-header link-header-lakers" href="#legacy">Legacy</a>
+            <a class="link-header link-header-lakers" href="#tryyourself"
+              >Try yourself</a
+            >
+            <a class="link-header link-header-lakers" href="#gallery"
+              >Gallery</a
+            >
+          </div>
+        </div>
+        <h2 class="heading-secondary player-name">Player Name</h2>
+        <h2 class="heading-secondary add-player-name">Player Name</h2>
+        <div class="hero-renders hero-renders-lakers">
+          <img
+            class="img-render img-render-magic img-center"
+            src="img/lakers/magicrender.png"
+          />
+          <img
+            class="img-render img-render-davis img-right-1"
+            src="img/lakers/davisrender.png"
+          />
+          <img
+            class="img-render img-render-lebron img-right-2"
+            src="img/lakers/lebronrender.png"
+          />
+          <img
+            class="img-render img-render-shaq img-left-2"
+            src="img/lakers/shaqrender.png"
+          />
+          <img
+            class="img-render img-render-kobe img-left-1"
+            src="img/lakers/koberender.png"
+          />
+          <img
+            class="img-render img-render-kareem img-add hidden"
+            src="img/lakers/karimrender.png"
+          />
+        </div>
+      </section>
+      <section class="section-dynasty section-dynasty-lakers" id="dynasty">
+        <div class="container dynasty dynasty -lakers">
+          <h2 class="heading-secondary">Dynasty</h2>
+        </div>
+      </section>
+      <section class="section-mvp section-mvp-lakers" id="mvp">
+        <div class="container mvp mvp-lakers">
+          <h2 class="heading-secondary">MVPs</h2>
+        </div>
+      </section>
+      <section class="section-legacy section-legacy-lakers" id="legacy">
+        <div class="container legacy legacy-lakers">
+          <h2 class="heading-secondary">Legacy</h2>
+        </div>
+      </section>
+      <section
+        class="section-tryyourself section-tryyourself-lakers"
+        id="tryyourself"
+      >
+        <div class="container tryyourself tryyourself-lakers">
+          <h2 class="heading-secondary">Try yourself</h2>
+          <div class="class-box tryyourself-box grid grid--2-cols">
+            <div class="height-mesure">
+              <p class="section-p">Compare your height to the NBA stars.</p>
+              <p class="section-p">Type your height in CM:</p>
+              <div class="input-height-box">
+                <input class="input-height" type="number" min="50" max="250" placeholder="178cm" />
+                <input class="input-submit input-submit-lakers" type="submit" value="Check"></input>
+                <p class="section-p alert-p"></p>
+              </div>
+              <div class="btn-choose-box">
+
+                <button class="btn-choose-compare btn-choose-curry">Stephen Curry</button>
+                <button class="btn-choose-compare btn-choose-andre">Andre Iquodala</button>
+                <button class="btn-choose-compare btn-choose-klay">Klay Thompson</button>
+                <button class="btn-choose-compare btn-choose-green">Draymond Green</button>
+                <button class="btn-choose-compare btn-choose-durant">Kevin Durant</button>
+                <button class="btn-choose-compare btn-choose-wilt">Wilt Chamberlain</button>
+              </div>
+            </div>
+            <div class="compare-box grid grid--2-cols">
+              <img
+                class="img-compare-you"
+                src="img/bulls/tryyourself/tryyourself-you.png"
+              />
+              <img
+                class="img-compare-player img-compare-curry img-hidden"
+                src="img/warriors/tryyourself/try-curry.png"
+              />
+              <img
+                class="img-compare-player img-compare-andre img-hidden"
+                src="img/warriors/tryyourself/try-andre.png"
+              />
+              <img
+                class="img-compare-player img-compare-klay img-hidden"
+                src="img/warriors/tryyourself/try-klay.png"
+              />
+              <img
+                class="img-compare-player img-compare-green img-hidden"
+                src="img/warriors/tryyourself/try-green.png"
+              />
+              <img
+                class="img-compare-player img-compare-durant img-hidden"
+                src="img/warriors/tryyourself/try-durant.png"
+              />
+              <img
+                class="img-compare-player img-compare-wilt img-hidden"
+                src="img/warriors/tryyourself/try-wilt.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-gallery section-gallery-lakers" id="gallery">
+        <div class="container gallery gallery-lakers">
+          <h2 class="heading-secondary">Gallery</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
