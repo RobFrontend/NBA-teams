@@ -138,3 +138,113 @@ btnRodman.addEventListener("click", function () {
   compRodman.classList.remove("img-hidden");
 });
 ///////////////////////////////////////////////////
+// GUESS THE PLAYER
+const imgPLayers = document.querySelector(".img-guess");
+
+const guessRodman = document.querySelector(".img-guess-rodman");
+const heightRodman = document.querySelector(".guess-height-rodman");
+const tipRodman = document.querySelector(".guess-height-rodman");
+tipRodman.textContent = rodman.height + "cm";
+
+const guessLavine = document.querySelector(".img-guess-lavine");
+const heightLavine = document.querySelector(".guess-height-lavine");
+const tipLavine = document.querySelector(".guess-height-lavine");
+tipLavine.textContent = lavine.height + "cm";
+
+const guessRose = document.querySelector(".img-guess-rose");
+const heightRose = document.querySelector(".guess-height-rose");
+const tipRose = document.querySelector(".guess-height-rose");
+tipRose.textContent = rose.height + "cm";
+
+const guessJordan = document.querySelector(".img-guess-jordan");
+const heightJordan = document.querySelector(".guess-height-jordan");
+const tipJordan = document.querySelector(".guess-height-jordan");
+tipJordan.textContent = jordan.height + "cm";
+
+const guessPlayer = document.querySelector(".guess-name");
+const btnGuess = document.querySelector(".input-submit-guess");
+
+const guessAlert = document.querySelector(".alert-guess");
+const guessEndText = document.querySelector(".guess-endtext");
+
+const guessScore = document.querySelector(".guess-score");
+const guessHighScore = document.querySelector(".guess-highscore");
+const btnAgain = document.querySelector(".btn-again");
+let trials = 4;
+let score = 0;
+guessScore.textContent = trials;
+guessHighScore.textContent = score;
+
+btnGuess.addEventListener("click", function () {
+  if (trials === 0) {
+    trials = 0;
+    guessScore.textContent = `${trials}`;
+    guessEndText.textContent = `You lost!`;
+  } else if (score !== 4) {
+    if (guessPlayer.value === "Dennis Rodman") {
+      guessRodman.style.filter = "brightness(1)";
+      guessAlert.textContent = "Dennis the menace!";
+      heightRodman.style.opacity = "0";
+      score++;
+      guessHighScore.textContent = `${score}`;
+      if (score === 4) {
+        guessEndText.textContent = "Great! You won!";
+      }
+    } else if (guessPlayer.value === "Derrick Rose") {
+      guessRose.style.filter = "brightness(1)";
+      guessAlert.textContent = "Too big, too strong, too fast, too good!";
+      heightRose.style.opacity = "0";
+      score++;
+      guessHighScore.textContent = `${score}`;
+      if (score === 4) {
+        guessEndText.textContent = "Great! You won!";
+      }
+    } else if (guessPlayer.value === "Michael Jordan") {
+      guessJordan.style.filter = "brightness(1)";
+      guessAlert.textContent = "The G.O.A.T himself!";
+      heightJordan.style.opacity = "0";
+      score++;
+      guessHighScore.textContent = `${score}`;
+      if (score === 4) {
+        guessEndText.textContent = "Great! You won!";
+      }
+    } else if (guessPlayer.value === "Zach Lavine") {
+      guessLavine.style.filter = "brightness(1)";
+      guessAlert.textContent = "Show time!";
+      heightLavine.style.opacity = "0";
+      score++;
+      guessHighScore.textContent = `${score}`;
+      if (score === 4) {
+        guessEndText.textContent = "Great! You won!";
+      }
+    } else {
+      guessAlert.textContent = "Wrong!";
+      trials--;
+      guessScore.textContent = `${trials}`;
+      if (trials === 0) {
+        trials = 0;
+        guessScore.textContent = `${trials}`;
+        guessEndText.textContent = `You lost!`;
+      }
+    }
+  }
+});
+
+btnAgain.addEventListener("click", function () {
+  trials = 4;
+  guessScore.textContent = `${trials}`;
+  score = 0;
+  guessHighScore.textContent = `${score}`;
+  guessRodman.style.filter = "brightness(0)";
+  guessRose.style.filter = "brightness(0)";
+  guessJordan.style.filter = "brightness(0)";
+  guessLavine.style.filter = "brightness(0)";
+  heightRodman.style.opacity = "1";
+  heightRose.style.opacity = "1";
+  heightJordan.style.opacity = "1";
+  heightLavine.style.opacity = "1";
+  guessAlert.textContent = "Guess!";
+  guessPlayer.value = "";
+  guessEndText.textContent = "";
+});
+////////////////////////////////////////////////////////

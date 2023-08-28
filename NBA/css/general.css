@@ -63,6 +63,7 @@ section:last-child {
   gap: 4.8rem;
   padding: 3.2rem;
 }
+.input-submit-guess,
 .input-submit,
 .btn-team {
   font-family: inherit;
@@ -77,7 +78,7 @@ section:last-child {
   transition: all 0.3s;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 }
-.input-submit,
+
 .btn-team:hover {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
 }
@@ -150,6 +151,10 @@ section:last-child {
 
 .grid {
   display: grid;
+}
+
+.grid--1-cols {
+  grid-template-columns: 1fr;
 }
 
 .grid--2-cols {
@@ -348,15 +353,17 @@ section:last-child {
   flex-direction: column;
   text-align: center;
 }
-
+.guess-name,
 .input-height {
-  font-size: 3.2rem;
   border: none;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fefefe;
   border-radius: 15px;
   padding: 0.6rem 1.2rem;
   text-align: center;
+}
+.input-height {
+  font-size: 3.2rem;
 }
 
 .input-height-box {
@@ -379,7 +386,7 @@ section:last-child {
   gap: 2.4rem;
   justify-content: center;
 }
-
+.btn-again,
 .btn-choose-compare {
   font-family: inherit;
   font-size: 1.8rem;
@@ -392,6 +399,7 @@ section:last-child {
   background-color: #fefefe;
   transition: all 0.5s;
 }
+.btn-again:hover,
 .btn-choose-compare:hover {
   color: #111;
   background-color: #aaa;
@@ -436,4 +444,86 @@ section:last-child {
 
 .img-hidden {
   display: none;
+}
+
+/* ********************************* */
+/* GUESS */
+
+.guess-box {
+  position: relative;
+  margin-bottom: 9.6rem;
+  gap: 6.4rem;
+  justify-content: center;
+  align-content: center;
+  padding: 3.2rem;
+}
+.img-guess-boxes,
+.guess-text-box {
+  grid-column: 1/-1;
+}
+
+.guess-text-box {
+  padding-top: 2.4rem;
+  grid-template-columns: 30fr 40fr 30fr;
+  gap: 3.2rem;
+}
+.guess-endtext {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-again {
+  position: absolute;
+  right: 5rem;
+  top: 0;
+}
+.guess-text-info {
+  text-align: center;
+  align-self: start;
+}
+.guess-text-input {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  width: fit-content;
+  text-align: center;
+}
+
+.guess-text-score {
+  justify-self: start;
+  align-self: start;
+}
+
+.guess-name {
+  font-size: 1.8rem;
+}
+.input-submit-guess {
+  font-size: 1.8rem;
+}
+.img-guess-boxes {
+  gap: 4.8rem;
+  grid-row: 2;
+}
+
+.img-guess-box {
+  height: 30rem;
+  position: relative;
+}
+
+.guess-height {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.img-guess {
+  height: 100%;
+  filter: brightness(0);
+  transition: all 0.5s;
 }
