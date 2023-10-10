@@ -498,12 +498,20 @@ section:last-child {
   align-self: start;
 }
 
-.guess-name {
-  font-size: 1.8rem;
-}
+.guess-name,
 .input-submit-guess {
   font-size: 1.8rem;
+  width: fit-content;
+  align-self: center;
 }
+
+.guess-score,
+.guess-highscore {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
 .img-guess-boxes {
   gap: 4.8rem;
   grid-row: 2;
@@ -520,10 +528,26 @@ section:last-child {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  transition: all 0.5s;
 }
 
 .img-guess {
   height: 100%;
-  filter: brightness(0);
+  filter: brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05));
   transition: all 0.5s;
+}
+.img-guess:hover {
+  filter: brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+/* Footer */
+footer {
+  padding: 3.2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+.footer-p {
+  margin-bottom: 0.6rem;
 }

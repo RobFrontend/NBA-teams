@@ -1,6 +1,12 @@
 "use strict";
 
 ////////////////////////////////////////
+/// Year date
+const currentYear = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+yearEl.textContent = currentYear;
+
+////////////////////////////////////////
 //// SHOW ADDITIONAL IMG BY HOVER CENTER IMG
 
 const imgCenter = document.querySelector(".img-center");

@@ -9,7 +9,7 @@ const addPlayerName = document.querySelector(".add-player-name");
 const roseHover = document.querySelector(".img-render-rose");
 const rose = {
   fullName: "Derrick Rose",
-  height: 188,
+  height: 191,
   mvpNumber: 1,
 };
 roseHover.addEventListener("mouseover", function () {
@@ -176,44 +176,68 @@ guessScore.textContent = trials;
 guessHighScore.textContent = score;
 
 btnGuess.addEventListener("click", function () {
-  if (trials === 0) {
+  if (trials <= 0) {
     trials = 0;
-    guessScore.textContent = `${trials}`;
+    guessScore.textContent = `${trials * 0}`;
     guessEndText.textContent = `You lost!`;
   } else if (score !== 4) {
-    if (guessPlayer.value === "Dennis Rodman") {
-      guessRodman.style.filter = "brightness(1)";
+    if (
+      guessPlayer.value.trim().toLowerCase() === "dennis rodman" &&
+      heightRodman.style.opacity != "0"
+    ) {
+      guessRodman.style.filter =
+        "brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2))";
       guessAlert.textContent = "Dennis the menace!";
       heightRodman.style.opacity = "0";
+      heightRodman.style.transform = "translateX(10rem)";
       score++;
       guessHighScore.textContent = `${score}`;
+      guessPlayer.value = "";
       if (score === 4) {
         guessEndText.textContent = "Great! You won!";
       }
-    } else if (guessPlayer.value === "Derrick Rose") {
-      guessRose.style.filter = "brightness(1)";
+    } else if (
+      guessPlayer.value.trim().toLowerCase() === "derrick rose" &&
+      heightRose.style.opacity != "0"
+    ) {
+      guessRose.style.filter =
+        "brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2))";
       guessAlert.textContent = "Too big, too strong, too fast, too good!";
       heightRose.style.opacity = "0";
+      heightRose.style.transform = "translateX(10rem)";
       score++;
       guessHighScore.textContent = `${score}`;
+      guessPlayer.value = "";
       if (score === 4) {
         guessEndText.textContent = "Great! You won!";
       }
-    } else if (guessPlayer.value === "Michael Jordan") {
-      guessJordan.style.filter = "brightness(1)";
+    } else if (
+      guessPlayer.value.trim().toLowerCase() === "michael jordan" &&
+      heightJordan.style.opacity != "0"
+    ) {
+      guessJordan.style.filter =
+        "brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2))";
       guessAlert.textContent = "The G.O.A.T himself!";
       heightJordan.style.opacity = "0";
+      heightJordan.style.transform = "translateX(10rem)";
       score++;
       guessHighScore.textContent = `${score}`;
+      guessPlayer.value = "";
       if (score === 4) {
         guessEndText.textContent = "Great! You won!";
       }
-    } else if (guessPlayer.value === "Zach Lavine") {
-      guessLavine.style.filter = "brightness(1)";
+    } else if (
+      guessPlayer.value.trim().toLowerCase() === "zach lavine" &&
+      heightLavine.style.opacity != "0"
+    ) {
+      guessLavine.style.filter =
+        "brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.2))";
       guessAlert.textContent = "Show time!";
       heightLavine.style.opacity = "0";
+      heightLavine.style.transform = "translateX(10rem)";
       score++;
       guessHighScore.textContent = `${score}`;
+      guessPlayer.value = "";
       if (score === 4) {
         guessEndText.textContent = "Great! You won!";
       }
@@ -223,6 +247,7 @@ btnGuess.addEventListener("click", function () {
       guessScore.textContent = `${trials}`;
       if (trials === 0) {
         trials = 0;
+        guessScore.style.color = "#aa1036";
         guessScore.textContent = `${trials}`;
         guessEndText.textContent = `You lost!`;
       }
@@ -235,10 +260,15 @@ btnAgain.addEventListener("click", function () {
   guessScore.textContent = `${trials}`;
   score = 0;
   guessHighScore.textContent = `${score}`;
-  guessRodman.style.filter = "brightness(0)";
-  guessRose.style.filter = "brightness(0)";
-  guessJordan.style.filter = "brightness(0)";
-  guessLavine.style.filter = "brightness(0)";
+  guessScore.style.color = "inherit";
+  guessRodman.style.filter =
+    "brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05))";
+  guessRose.style.filter =
+    "brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05))";
+  guessJordan.style.filter =
+    "brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05))";
+  guessLavine.style.filter =
+    "brightness(0) drop-shadow(0 0 5px rgba(255, 255, 255, 0.05))";
   heightRodman.style.opacity = "1";
   heightRose.style.opacity = "1";
   heightJordan.style.opacity = "1";
@@ -246,5 +276,9 @@ btnAgain.addEventListener("click", function () {
   guessAlert.textContent = "Guess!";
   guessPlayer.value = "";
   guessEndText.textContent = "";
+  heightRodman.style.transform = "translateX(-50%) translateY(-50%)";
+  heightRose.style.transform = "translateX(-50%) translateY(-50%)";
+  heightJordan.style.transform = "translateX(-50%) translateY(-50%)";
+  heightLavine.style.transform = "translateX(-50%) translateY(-50%)";
 });
 ////////////////////////////////////////////////////////
